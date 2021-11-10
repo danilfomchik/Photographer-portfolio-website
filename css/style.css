@@ -35,6 +35,7 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-family: 'Poppins', sans-serif;;
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
@@ -65,6 +66,311 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+.header{
+    width: 100%;
+    font-size: 17px;
+}
+
+.menu-container{
+    background-color: #F2E9E4;
+}
+
+.menu-nav{
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.menu-social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.menu-ul{
+    padding-right: 20px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menu-ul li{
+    padding: 20px;
+    font-weight: bold;
+}
+
+.menu-social li{
+    padding: 20px 10px;
+}
+
+.menu-ul li a, .menu-social li a, .footer-ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.about-me{
+    width: 100%;
+}
+
+.about-me-container{
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+}
+
+.about-me-container div{
+    width: 50vw;
+}
+
+.about-me_avatar-image{
+    margin: 30px 15px 30px 10px;
+}
+
+/* .about-me_avatar-image img{
+    max-width: 35vw;
+} */
+
+.title{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.about-me_info{
+    margin: 30px 10px 30px 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #F2E9E4;
+}
+
+.about-me_description{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.lets-chat{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 14px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.services{
+    width: 100%;
+}
+
+.services-container{
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 40px 30px;
+}
+
+.services_item{
+    max-width: 33.33%;
+    padding: 30px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.service1{
+    position: relative;
+}
+
+.services_item-background{
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: -10px;
+}
+
+.services_item_title{
+    padding: 30px 0px 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.services_item_description{
+    font-size: 14px;
+}
+
+.services_price {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 0px 0px 0px;
+}
+
+.work-together{
+    width: 100%;
+    background-color: #F2E9E4;
+}
+
+.work-together-container{
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    padding: 40px;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.work-together_info{
+    background-color: white;
+    text-align: center;
+    padding: 30px;
+    margin: 0px 30px 0px 0px;
+    align-self: center;
+    max-width: 40vw;
+}
+
+.work-together_info_background{
+    position: absolute;
+    z-index: -1;
+    max-width: 370px;
+    bottom: 0px;
+    /* left: 440px; */
+}
+
+.work-together_image{
+    max-width: 300px;
+}
+
+.customer-coments{
+    width: 100%;
+}
+
+.customer-coments-container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.customer-coments_title{
+    padding-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.slick-prev:before,
+  .slick-next:before {
+    display: none;
+}
+  
+.customer-coments-slick .slick-arrow{
+    /* position: absolute;
+    top: 50%;
+    margin: -15px 0 0 0; */
+    z-index: 2;
+    font-size: 0;
+    width: 30px;
+    height: 55px;
+}
+
+.customer-coments-slick .slick-arrow.slick-prev{
+    left: 0;
+    background: url('../pictures/arrow-left.png') 0 0 / 100% no-repeat;
+}
+
+.customer-coments-slick .slick-arrow.slick-next{
+    right: 0;
+    background: url('../pictures/arrow-right.png') 0 0 / 100% no-repeat;
+}
+
+.customer-coments-slick .comment{
+    max-width: 48vw;
+    margin: 0 auto;
+}
+
+.slick-slider{
+    margin-bottom: 10px;
+}
+
+/* .inst_block-section{
+    height: 400px;
+    max-height: 400px;
+} */
+
+.inst_block{
+    width: 100%;
+    background-color: #F2E9E4;
+}
+
+.inst_block-container{
+    max-width: 1100px;
+    margin: 0 auto;
+    /* position: relative; */
+}
+
+.inst_block-images{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px 20px 20px;
+    /* position: absolute;
+    top: 80px; */
+}
+
+.inst_block-image-block{
+    padding: 20px 10px;
+}
+
+.inst_block_title{
+    text-align: center;
+    padding-top: 30px;
+    /* height: 320px;
+    max-height: 320px; */
+}
+
+.footer_block{
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.footer_block-container{
+    max-width: 1100px;
+    margin: 0 auto;
+    font-size: 17px;
+}
+
+.footer-ul{
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-ul li{
+    padding: 40px;
+    font-weight: bold;
 }
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */

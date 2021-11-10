@@ -5,12 +5,153 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="./slick-1.8.1/slick/slick-theme.css">
+
     <link rel="stylesheet" href="./css/style.css">
     <title>Alina Evteeva | Photograph Dnepr</title>
 </head>
 <body>
-    
+    <header class="header" id="header">
+        <div class="menu-container">
+            <nav class="menu-nav">
+                <ul class="menu-social">
+                    <!-- <li><a href="#"><i class="fab fa-facebook-f"></i></a></li> -->
+                    <li><a href="https://www.pinterest.ru/klassik042/_saved/"><i class="fab fa-pinterest"></i></a></li>
+                    <li><a href="https://www.instagram.com/photo_persik/?utm_medium=copy_link" target="_blanck"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+                <ul class="menu-ul">
+                    <li><a href="#">Home</a></li>
+                    <!-- <li><a href="#">About</a></li> -->
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Search</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="about-me" id="about-me">
+                <div class="about-me-container" id="about-me-container">
+                    <div class="about-me_avatar-image">
+                        <img src="./pictures/avatar.png" alt="My avatar">
+                    </div>
+                    <div class="about-me_info">
+                        <h1 class="title">About me</h1>
+                        <p class="about-me_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic sequi dolorem esse omnis sed, possimus aspernatur? Unde quia libero omnis perspiciatis amet, explicabo tempora, iusto vitae, laudantium nemo distinctio vel!</p>
+                        <button class="lets-chat">let`s chat</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="services" id="services">
+                <div class="services-container">
+                    <div class="services_item service1">
+                        <img src="./pictures/service3.png" alt="First service">
+                        <img class="services_item-background" src="./pictures/background1.png" alt="Background">
+                        <h2 class="services_item_title">service package 1</h2>
+                        <p class="services_item_description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab ipsa voluptatem doloremque architecto accusamus corporis perferendis</p>
+                        <p class="services_price">starting price from $100</p>
+                    </div>
+                    <div class="services_item service2">
+                        <img src="./pictures/service2.png" alt="First service">
+                        <h2 class="services_item_title">service package 1</h2>
+                        <p class="services_item_description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab ipsa voluptatem doloremque architecto accusamus corporis perferendis</p>
+                        <p class="services_price">starting price from $200</p>
+                    </div>
+                    <div class="services_item service3">
+                        <img src="./pictures/service1.png" alt="First service">
+                        <h2 class="services_item_title">service package 1</h2>
+                        <p class="services_item_description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab ipsa voluptatem doloremque architecto accusamus corporis perferendis</p>
+                        <p class="services_price">starting price from $300</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="work-together">
+                <div class="work-together-container">
+                    <div class="work-together_info">
+                        <h1 class="title">About me</h1>
+                        <p class="work-together_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic sequi dolorem esse omnis sed, possimus aspernatur? Unde quia libero omnis perspiciatis amet, explicabo tempora, iusto vitae, laudantium nemo distinctio vel!</p>
+                        <button class="lets-chat">let`s chat</button>
+                    </div>
+                    <img class="work-together_info_background" src="./pictures/flowers.png" alt="">
+                    <div>
+                        <img class="work-together_image" src="./pictures/man.png" alt="My avatar">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="customer-coments">
+                <div class="customer-coments-container">
+                    <h1 class="title customer-coments_title">What my clients are saying</h1>
+                    <div class="customer-coments-slick">
+                        <div>
+                            <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nesciunt odit ut, optio atque non recusandae earum accusamus saepe? Reiciendis nisi veritatis temporibus iusto nulla officiis id similique delectus tenetur?</p>
+                        </div>
+                        <div>
+                            <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nesciunt odit ut, optio atque non recusandae earum accusamus saepe? Reiciendis nisi veritatis temporibus iusto nulla officiis id similique delectus tenetur?</p>
+                        </div>
+                        <div>
+                            <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nesciunt odit ut, optio atque non recusandae earum accusamus saepe? Reiciendis nisi veritatis temporibus iusto nulla officiis id similique delectus tenetur?</p>
+                        </div>
+                        <div>
+                            <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nesciunt odit ut, optio atque non recusandae earum accusamus saepe? Reiciendis nisi veritatis temporibus iusto nulla officiis id similique delectus tenetur?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="inst_block-section">
+            <div class="inst_block">
+                <div class="inst_block-container">
+                    <h1 class="title inst_block_title">follow me @photo_persik</h1>
+                    <div class="inst_block-images">
+                        <div class="inst_block-image-block">
+                            <img src="./pictures/inst_img1.png" alt="">
+                        </div>
+                        <div class="inst_block-image-block">
+                            <img src="./pictures/inst_img2.png" alt="">
+                        </div>
+                        <div class="inst_block-image-block">
+                            <img src="./pictures/inst_img3.png" alt="">
+                        </div>
+                        <div class="inst_block-image-block">
+                            <img src="./pictures/inst_img4.png" alt="">
+                        </div>
+                        <div class="inst_block-image-block">
+                            <img src="./pictures/inst_img5.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer_block">
+            <div class="footer_block-container">
+                <ul class="footer-ul">
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="https://www.pinterest.ru/klassik042/_saved/"><i class="fab fa-pinterest"></i></a></li>
+                    <li><a href="https://www.instagram.com/photo_persik/?utm_medium=copy_link" target="_blanck"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#">copyright@2021 | persik</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
+    <script src="https://kit.fontawesome.com/6cb87dd491.js" crossorigin="anonymous"></script>
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="./slick-1.8.1/slick/slick.min.js"></script>
     <script src="./js/custom.js"></script>
 </body>
 </html>
