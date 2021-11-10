@@ -101,12 +101,97 @@ select {
 }
 
 .menu-ul li{
-    padding: 20px;
+    padding: 10px;
     font-weight: bold;
+    background-color: white;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius:10px;
+    transition:all 1s;
+    cursor: pointer;
+    position: relative;
+}
+.menu-ul li:not(:last-child){
+    margin-right: 30px;
+}
+
+.menu-ul li:after, .menu-ul li:before{
+    content:" ";
+    width:10px;
+    height:10px;
+    position:absolute;
+    border :0px solid #fff;
+    transition:all 0.5s;
+}
+
+.menu-ul li:after{
+    top:-1px;
+    left:-1px;
+    border-top:3px solid black;
+    border-left:3px solid black;
+}
+.menu-ul li:before{
+    bottom:-1px;
+    right:-1px;
+    border-bottom:3px solid black;
+    border-right:3px solid black;
+}
+.menu-ul li:hover{
+    border-top-right-radius:0px;
+    border-bottom-left-radius:0px;
+}
+
+.menu-ul li:hover:before, .menu-ul li:hover:after{
+    width:110%;
+    height:115%;
 }
 
 .menu-social li{
-    padding: 20px 10px;
+    padding: 0px 8px;
+    margin: 0px 5px;
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.menu-social li::before{
+    content: '';
+    position: absolute;
+    width: 90%;  height: 90%;
+    top: 3%;   left: 5%;
+    border-radius: 50%;
+    transform: scale(0,0);
+    transition: .9s;
+    z-index: -1;
+}
+
+.menu-social .instagram::before{
+    background: linear-gradient(to right, #8a2387, #e94057, #f27121);
+}
+
+.menu-social .pinterest::before{
+    background: #BD081C
+}
+
+.menu-social li:hover::before{
+    transform: scale(1,1); 
+}
+
+.menu-social li a{
+    display: inline-block;
+    color: #262626;
+    font-size: 47px;
+    transition: .9s;
+}
+
+.menu-social li:hover a{
+    transition: .3s;
+    color: #fff;
+}
+
+.menu-social li a{
+    font-size: 22px;
 }
 
 .menu-ul li a, .menu-social li a, .footer-ul li a{
@@ -319,6 +404,10 @@ select {
 .inst_block{
     width: 100%;
     background-color: #F2E9E4;
+    background-image: url('../pictures/white-background.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
 }
 
 .inst_block-container{
@@ -333,7 +422,7 @@ select {
     align-content: center;
     justify-content: center;
     align-items: center;
-    padding: 0px 20px 20px 20px;
+    padding: 0px 20px;
     /* position: absolute;
     top: 80px; */
 }
