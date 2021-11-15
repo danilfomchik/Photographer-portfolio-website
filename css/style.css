@@ -35,7 +35,8 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  font-family: 'Poppins', sans-serif;;
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Times New Roman', Times, serif;
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
@@ -71,10 +72,58 @@ select {
 .header{
     width: 100%;
     font-size: 17px;
+    position: fixed;
+    z-index: 999;
+    border-bottom: 1px solid black;
+}
+
+.mobile-menu{
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.menu-btn {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+}
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+  position: absolute;
+  top: 50%; margin-top: -1px;
+  left: 50%; margin-left: -10px;
+  width: 20px;
+  height: 1.5px;
+  background-color: #222;
+}
+.menu-btn span::before,
+.menu-btn span::after {
+  content: '';
+  display: block;
+  transition: 0.2s;
+}
+.menu-btn span::before {
+  transform: translateY(-5px);
+}
+.menu-btn span::after {
+  transform: translateY(5px);
+}
+.menu-btn_active span{
+    height: 0;
+}
+.menu-btn_active span:before {
+  transform: rotate(-45deg);
+}
+.menu-btn_active span:after {
+  transform: rotate(45deg);
 }
 
 .menu-container{
-    background-color: #F2E9E4;
+    background-color: #fde3ec;
 }
 
 .menu-nav{
@@ -91,7 +140,7 @@ select {
     align-content: center;
 }
 
-.menu-ul{
+.menu-ul, .footer-ul{
     padding-right: 20px;
     display: flex;
     flex-direction: row;
@@ -100,7 +149,7 @@ select {
     align-items: center;
 }
 
-.menu-ul li{
+.menu-ul li, .footer-ul li{
     padding: 10px;
     font-weight: bold;
     background-color: white;
@@ -110,14 +159,14 @@ select {
     cursor: pointer;
     position: relative;
 }
-.menu-ul li:not(:last-child){
+.menu-ul li:not(:last-child), .footer-ul li:not(:last-child){
     margin-right: 30px;
 }
 
 .menu-ul li:after, .menu-ul li:before{
     content:" ";
-    width:10px;
-    height:10px;
+    width:8px;
+    height:8px;
     position:absolute;
     border :0px solid #fff;
     transition:all 0.5s;
@@ -126,14 +175,14 @@ select {
 .menu-ul li:after{
     top:-1px;
     left:-1px;
-    border-top:3px solid black;
-    border-left:3px solid black;
+    border-top:2px solid black;
+    border-left:2px solid black;
 }
 .menu-ul li:before{
     bottom:-1px;
     right:-1px;
-    border-bottom:3px solid black;
-    border-right:3px solid black;
+    border-bottom:2px solid black;
+    border-right:2px solid black;
 }
 .menu-ul li:hover{
     border-top-right-radius:0px;
@@ -147,7 +196,7 @@ select {
 
 .menu-social li{
     padding: 0px 8px;
-    margin: 0px 5px;
+    margin: 6px 5px;
     position: relative;
     background: #fff;
     border-radius: 50%;
@@ -159,10 +208,10 @@ select {
     content: '';
     position: absolute;
     width: 90%;  height: 90%;
-    top: 3%;   left: 5%;
+    top: 5%;   left: 4%;
     border-radius: 50%;
     transform: scale(0,0);
-    transition: .9s;
+    transition: .5s;
     z-index: -1;
 }
 
@@ -201,6 +250,7 @@ select {
 
 .about-me{
     width: 100%;
+    padding-top: 65px;;
 }
 
 .about-me-container{
@@ -208,6 +258,7 @@ select {
     margin: 0 auto;
     display: flex;
     align-items: stretch;
+    justify-content: center;
 }
 
 .about-me-container div{
@@ -218,30 +269,32 @@ select {
     margin: 30px 15px 30px 10px;
 }
 
-/* .about-me_avatar-image img{
-    max-width: 35vw;
-} */
+.img-border{
+    border: 1px solid black;
+}
 
 .title{
     letter-spacing: 2px;
     text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
 }
 
 .about-me_info{
     margin: 30px 10px 30px 15px;
-    padding: 30px;
+    padding: 30px 74px;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #F2E9E4;
+    background-color: #fde3ec;
 }
 
 .about-me_description{
     text-align: center;
     margin-top: 30px;
     font-size: 16px;
+    font-family:'Times New Roman', Times, serif;
 }
 
 .lets-chat{
@@ -256,6 +309,13 @@ select {
     font-size: 14px;
     margin-top: 30px;
     cursor: pointer;
+    border: 1px solid black;
+    transition: .5s;
+}
+
+.lets-chat:hover{
+    background-color: white;
+    color: black;
 }
 
 .services{
@@ -295,6 +355,7 @@ select {
     padding: 30px 0px 20px;
     text-transform: uppercase;
     font-size: 20px;
+    font-family: 'Playfair Display', serif;
 }
 
 .services_item_description{
@@ -309,7 +370,7 @@ select {
 
 .work-together{
     width: 100%;
-    background-color: #F2E9E4;
+    background-color: #fde3ec;
 }
 
 .work-together-container{
@@ -328,7 +389,7 @@ select {
 .work-together_info{
     background-color: white;
     text-align: center;
-    padding: 30px;
+    padding: 15px;
     margin: 0px 30px 0px 0px;
     align-self: center;
     max-width: 40vw;
@@ -340,6 +401,10 @@ select {
     max-width: 370px;
     bottom: 0px;
     /* left: 440px; */
+}
+
+.work-together_description{
+    padding: 30px 30px 0px;
 }
 
 .work-together_image{
@@ -378,12 +443,12 @@ select {
 }
 
 .customer-coments-slick .slick-arrow.slick-prev{
-    left: 0;
+    left: 40px;
     background: url('../pictures/arrow-left.png') 0 0 / 100% no-repeat;
 }
 
 .customer-coments-slick .slick-arrow.slick-next{
-    right: 0;
+    right: 40px;
     background: url('../pictures/arrow-right.png') 0 0 / 100% no-repeat;
 }
 
@@ -403,7 +468,7 @@ select {
 
 .inst_block{
     width: 100%;
-    background-color: #F2E9E4;
+    background-color: #fde3ec;
     background-image: url('../pictures/white-background.png');
     background-repeat: no-repeat;
     background-position: bottom;
@@ -446,23 +511,135 @@ select {
 .footer_block-container{
     max-width: 1100px;
     margin: 0 auto;
-    font-size: 17px;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-.footer-ul{
+/* .footer-ul{
     display: flex;
     flex-wrap: nowrap;
     align-content: center;
     justify-content: space-evenly;
     align-items: center;
+} */
+
+.footer_block-container li{
+    background: #fde3ec;
 }
 
-.footer-ul li{
-    padding: 40px;
-    font-weight: bold;
+@media (max-width: 1200px) {
+    .work-together_description{
+        padding: 20px 0px 0px;
+    }
 }
 
-/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (max-width: 1098px) {
+    .services_item-background{
+        height: 380px;
+    }
+    .work-together_info{
+        max-width: 45vw;
+    }
+}
+
+@media (max-width: 1025px) {
+    .services_item-background{
+        height: 350px;
+        width: 220px;
+    }
+}
+
+@media (max-width: 998px) {
+    .work-together_info{
+        padding: 10px 15px 15px;
+        max-width: 55vw;
+    }
+    .services_item-background{
+        display: none;
+    }
+    .inst_block{
+        background-image: none;
+    }
+    .inst_block-images{
+        flex-wrap: wrap;
+    }
+    .inst_block-image-block:last-child{
+        display: none;
+    }
+    .about-me-container div{
+        width: 45vw;
+    }
+}
+
+@media (max-width: 880px) {
+    .about-me-container{
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+    }
+    .about-me_avatar-image{
+        margin: 25px 15px 15px;
+    }
+    .about-me_info{
+        width: 80vw!important;
+        border: 1px solid black;
+        margin: 10px 10px 30px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .work-together_info{
+        margin: 0;
+        max-width: 70vw;
+    }
+    .work-together_info_background{
+        max-width: 280px;
+    }
+    .work-together_image{
+        display: none;
+    }
+    .inst_block-image-block{
+        max-width: 250px;
+    }
+    .menu-ul{
+        display: none;
+    }
+    .footer-ul{
+        display: flex;
+    }
+    .footer-ul li{
+        padding: 5px;
+    }
+    .footer-ul li:not(:last-child){
+        margin-right: 15px;
+    }
+    .menu-container{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+    }
+    .mobile-menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 30px;
+    }
+    .services_item{
+        padding: 30px 15px;
+    }
+}
+
+@media (max-width: 575px) {}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
