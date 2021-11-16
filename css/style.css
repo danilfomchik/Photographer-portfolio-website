@@ -77,6 +77,19 @@ select {
     border-bottom: 1px solid black;
 }
 
+/* .active_menu-item{
+    background-color: green;
+} */
+
+.active_menu-item:before, .active_menu-item:after{
+    width: 110% !important;;
+    height: 115% !important;;
+}
+.active_menu-item{
+    border-top-right-radius:0px !important;
+    border-bottom-left-radius:0px !important;
+}
+
 .mobile-menu{
     display: none;
     justify-content: center;
@@ -322,6 +335,11 @@ select {
     width: 100%;
 }
 
+.services_title{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
 .services-container{
     max-width: 1100px;
     margin: 0 auto;
@@ -453,18 +471,13 @@ select {
 }
 
 .customer-coments-slick .comment{
-    max-width: 48vw;
+    max-width: 65%;
     margin: 0 auto;
 }
 
 .slick-slider{
     margin-bottom: 10px;
 }
-
-/* .inst_block-section{
-    height: 400px;
-    max-height: 400px;
-} */
 
 .inst_block{
     width: 100%;
@@ -592,7 +605,7 @@ select {
     .about-me_info{
         width: 80vw!important;
         border: 1px solid black;
-        margin: 10px 10px 30px 15px;
+        margin: 10px 10px 30px 10px;
     }
 }
 
@@ -633,12 +646,138 @@ select {
         align-items: center;
         padding: 0px 30px;
     }
+    .about-me_info{
+        width: 90vw!important;
+        padding: 20px 74px;
+    }
+    .services-container{
+        flex-direction: column;
+    }
     .services_item{
-        padding: 30px 15px;
+        padding: 15px 60px;
+        max-width: 70vw;
+        margin: 0px 0px 20px;
+        background-color: #fde3ec;
+        /* border: 1px solid black; */
+    }
+    .services_item-img{
+        margin: 0 auto;
+        width: 30vw;
+        border: none;
+    }
+    .services_item_title{
+        padding: 16px 0px;
+    }
+    .services_price{
+        padding: 18px 0px 0px 0px;
+    }
+    .customer-coments-slick .slick-arrow.slick-next{
+        right: 30px;
+    }
+    .customer-coments-slick .slick-arrow.slick-prev{
+        left: 30px;
     }
 }
 
-@media (max-width: 575px) {}
+@media (max-width: 731px) {
+    .work-together-container{
+        padding: 35px;
+    }
+    .services_item{
+        padding: 15px 50px;
+    }
+}
+
+@media (max-width: 575px) {
+    .about-me-container div{
+        width: 55vw;
+    }
+    .about-me_info{
+        padding: 20px 40px;
+    }
+    .about-me_description{
+        margin-top: 15px;
+    }
+    .work-together_info{
+        max-width: 90vw;
+    }
+    .services_item{
+        padding: 15px 20px;
+    }
+    .customer-coments-slick .slick-arrow.slick-next{
+        right: 20px;
+    }
+    .customer-coments-slick .slick-arrow.slick-prev{
+        left: 20px;
+    }
+    .services_item-img{
+        width: 35vw;
+    }
+}
+
+@media (max-width: 475px) {
+    .work-together-container{
+        padding: 30px;
+        margin-top: 20px;
+    }
+    .customer-coments-slick .slick-arrow.slick-next{
+        right: 0px;
+    }
+    .customer-coments-slick .slick-arrow.slick-prev{
+        left: 0px;
+    }
+}
+
+@media (max-width: 455px) {
+    .work-together_info_background{
+        display: none;
+    }
+    .footer_block-container{
+        flex-direction: column-reverse;
+    }
+    .footer-ul{
+        padding-top: 25px!important;
+    }
+    .customer-coments-slick .slick-arrow.slick-next{
+        right: -15px;
+    }
+    .customer-coments-slick .slick-arrow.slick-prev{
+        left: -15px;
+    }
+    .services_item{
+        max-width: 80vw;
+    }
+    .services_item-img{
+        width: 45vw;
+    }
+    /* .customer-coments-slick .comment{
+        max-width: 70vw;
+    } */
+}
+
+@media (max-width: 320px) {
+    .about-me-container div{
+        width: 70vw;
+    }
+    .services-container{
+        padding: 0px 15px 30px;
+    }
+    .services_item{
+        min-width: 90vw;
+    }
+    .about-me_info{
+        padding: 20px 35px;
+    }
+    .services_item_title{
+        font-size: 18px;
+    }
+    .services_item_description{
+        font-size: 12px;
+    }
+    .services_price {
+        font-size: 16px;
+    }
+}
 
 @media (prefers-reduced-motion: reduce) {
   * {
