@@ -1,10 +1,47 @@
 //mobile menu animation
+const body = document.querySelector('body');
 const menuBtn = document.getElementById('menu-btn');
 const sections = document.querySelectorAll('.section');
-const menu_ul = document.querySelector('.menu-ul');
+const menu_ul = document.querySelectorAll('.menu-ul');
 const links = document.querySelectorAll('.menu-ul_item-link');
 const header = document.querySelector('header');
+const letsChat_btns = document.querySelectorAll('.lets-chat');
+const popUp = document.querySelector('.pop_up');
+const popUpContainer = document.querySelector('.pop_up-container');
+const closePopUp_btn = document.querySelector('.close_pop-up');
 
+//show popup
+letsChat_btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        body.style.overflow = 'hidden';
+        popUp.style.display = 'block';
+    })
+})
+
+//close popup
+closePopUp_btn.addEventListener('click', closePopUp);
+
+//close popup by click ESC
+document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape'){
+        closePopUp(e);
+    }
+})
+
+//close popup by clicking overlay
+popUpContainer.addEventListener('click', (e) => {
+    if(e.target == popUpContainer){
+        closePopUp(e);
+    }
+})
+
+//close popup func
+function closePopUp(e){
+    e.preventDefault();
+
+    body.style.overflow = 'auto';
+    popUp.style.display = 'none';
+}
 
 //mobile menu animation
 menuBtn.addEventListener('click', function (e){
@@ -34,20 +71,23 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach(section => observer.observe(section))
 
 //active menu item by click
-menu_ul.addEventListener('click', (event) => {
-    if(event.target.classList.contains('menu-ul_item')){
-        event.preventDefault();
+menu_ul.forEach((ul) => {
+    ul.addEventListener('click', (event) => {
+        if(event.target.classList.contains('menu-ul_item')){
+            event.preventDefault();
 
-        const menu_item = event.target;
-        const sectionId = menu_item.querySelector('a').getAttribute('href').replace('#', '');
+            const menu_item = event.target;
+            const sectionId = menu_item.querySelector('a').getAttribute('href').replace('#', '');
 
-        
-        window.scrollTo({
-            top: document.getElementById(sectionId).offsetTop - header.offsetHeight - 20,
-            behavior: 'smooth',
-        })
-    }
+            
+            window.scrollTo({
+                top: document.getElementById(sectionId).offsetTop - header.offsetHeight - 20,
+                behavior: 'smooth',
+            })
+        }
+    })
 })
+
 
 //slick slider
 $('.customer-coments-slick').slick({
