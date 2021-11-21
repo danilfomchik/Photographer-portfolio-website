@@ -18,6 +18,9 @@
 
     <link rel="stylesheet" href="./css/style.css">
     <title>Alina Evteeva | Photograph Dnepr</title>
+
+    <link href="./pictures/favicon.png" rel="icon" type="image/png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header class="header" id="header">
@@ -49,7 +52,7 @@
                         <img src="./pictures/avatar.png" alt="My avatar">
                     </div>
                     <div class="about-me_info">
-                        <h1 class="title">About me</h1>
+                        <h1 class="title" data-aos="zoom-in">About me</h1>
                         <p class="about-me_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic sequi dolorem esse omnis sed, possimus aspernatur? Unde quia libero omnis perspiciatis amet, explicabo tempora, iusto vitae, laudantium nemo distinctio vel!</p>
                         <button class="lets-chat">let`s chat</button>
                     </div>
@@ -59,7 +62,7 @@
         <section>
             <div class="pop_up">
                 <div class="pop_up-container img-border">
-                    <div class="pop_up-body">
+                    <div class="pop_up-body pop_up-hidden">
                         <h1 class="title">let’s work together</h1>
                         <a class="close_pop-up" href="/">Close</a>
                         <form action="" class="get-in-touch__form">
@@ -83,7 +86,7 @@
         </section>
         <section class="section" id="services-section">
             <div class="services" id="services">
-                <h1 class="title services_title">My services</h1>
+                <h1 class="title services_title" data-aos="zoom-in">My services</h1>
                 <div class="services-container">
                     <div class="services_item service1">
                         <img class="img-border services_item-img" src="./pictures/service3.png" alt="First service">
@@ -111,7 +114,7 @@
             <div class="work-together">
                 <div class="work-together-container">
                     <div class="work-together_info img-border">
-                        <h1 class="title">let’s work together</h1>
+                        <h1 class="title" data-aos="zoom-in">let’s work together</h1>
                         <p class="work-together_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic sequi dolorem esse omnis sed, possimus aspernatur? Unde quia libero omnis perspiciatis amet, explicabo tempora, iusto vitae, laudantium nemo distinctio vel!</p>
                         <button class="lets-chat">let`s chat</button>
                     </div>
@@ -125,7 +128,7 @@
         <section id="customer-coments-section">
             <div class="customer-coments">
                 <div class="customer-coments-container">
-                    <h1 class="title customer-coments_title">What my clients are saying</h1>
+                    <h1 class="title customer-coments_title" data-aos="zoom-in">What my clients are saying</h1>
                     <div class="customer-coments-slick">
                         <div>
                             <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nesciunt odit ut, optio atque non recusandae earum accusamus saepe? Reiciendis nisi veritatis temporibus iusto nulla officiis id similique delectus tenetur?</p>
@@ -146,7 +149,7 @@
         <section class="section" id="inst_block-section">
             <div class="inst_block">
                 <div class="inst_block-container">
-                    <h1 class="title inst_block_title">follow me @photo_persik</h1>
+                    <h1 class="title inst_block_title" data-aos="zoom-in">follow me @photo_persik</h1>
                     <div class="inst_block-images">
                         <div class="inst_block-image-block">
                             <img class="img-border" src="./pictures/inst_img1.png" alt="">
@@ -166,7 +169,7 @@
                     </div>
                 </div>
             </div>
-            <button class="show-more"><a href="#">show galary<i class="fas fa-long-arrow-alt-right"></i></a></button>
+            <button class="show-more"><a href="./galery/galery.html" target="_blanck">show galary<i class="fas fa-long-arrow-alt-right"></i></a></button>
         </section>
     </main>
     <footer>
@@ -188,6 +191,10 @@
     <script src="https://kit.fontawesome.com/6cb87dd491.js" crossorigin="anonymous"></script>
     <script src="./js/jquery-3.6.0.js"></script>
     <script type="text/javascript" src="./slick-1.8.1/slick/slick.min.js"></script>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
     <script src="./js/custom.js"></script>
 </body>
 </html>

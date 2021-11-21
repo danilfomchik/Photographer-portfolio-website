@@ -1,0 +1,145 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    overflow: auto;
+}
+
+button{
+    cursor: pointer;
+}
+
+.gallery-section{
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(400px, auto);
+    grid-gap: 5px;
+}
+
+.gallery-item{
+    position: relative;
+    background: #fde3ec;
+    overflow-x: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.item1{
+    background-image: url(../pictures/1.png);
+}
+.item2{
+    background-image: url(../pictures/2.png);
+}
+.item3{
+    background-image: url(../pictures/3.png);
+}
+.item4{
+    background-image: url(../pictures/4.png);
+}
+.item5{
+    background-image: url(../pictures/5.png);
+}
+.item6{
+    background-image: url(../pictures/6.png);
+}
+.item7{
+    background-image: url(../pictures/7.png);
+}
+.item8{
+    background-image: url(../pictures/8.png);
+}
+.item9{
+    background-image: url(../pictures/9.png);
+}
+.item10{
+    background-image: url(../pictures/10.png);
+}
+
+.gallery-item img{
+    position: absolute;
+    opacity: 0.9;
+}
+
+.gallery-item:hover .grid-overlay{
+    transform: translate(0%);
+}
+
+.grid-overlay{
+    background: #fde3ec;
+    height: 100%;
+    grid-column: -1;
+    grid-row: -1;
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    transform: translate(101%);
+    transition: all 0.3s ease-in-out;
+}
+
+.grid-overlay button{
+    background: none;
+    outline: none;
+    font-weight: 100;
+    letter-spacing: 2px;
+    border: 2px solid black;
+    color: black;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.grid-overlay button:hover{
+    transition: all 0.3s ease-in-out;
+    background: black;
+    color: white;
+    transform: scale(1.0);
+}
+
+.overlay{
+    position: fixed;
+    background: rgba(71, 69, 69, 0.7);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    z-index: 3;
+}
+
+.overlay.open{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.close{
+    position: absolute;
+    top: 3px;
+    right: 0px;
+    background: none;
+    outline: 0;
+    color: #474545;
+    border: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.close:hover{
+    color: #d1a39e;
+}
+
+.overlay-inner{
+    background: white;
+    /* width: 700px; */
+    padding: 20px;
+    position: relative;
+    opacity: 1;
+}
+
+/* .item-image{
+    margin-left: 50%;
+} */

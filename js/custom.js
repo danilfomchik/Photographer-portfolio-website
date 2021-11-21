@@ -8,6 +8,7 @@ const header = document.querySelector('header');
 const letsChat_btns = document.querySelectorAll('.lets-chat');
 const popUp = document.querySelector('.pop_up');
 const popUpContainer = document.querySelector('.pop_up-container');
+const popUpBody = document.querySelector('.pop_up-body');
 const closePopUp_btn = document.querySelector('.close_pop-up');
 
 //show popup
@@ -15,6 +16,9 @@ letsChat_btns.forEach(btn => {
     btn.addEventListener('click', () => {
         body.style.overflow = 'hidden';
         popUp.style.display = 'block';
+        
+        popUpBody.classList.remove('pop_up-hidden');
+        popUpBody.classList.add('pop_up-visible');
     })
 })
 
@@ -41,6 +45,9 @@ function closePopUp(e){
 
     body.style.overflow = 'auto';
     popUp.style.display = 'none';
+
+    popUpBody.classList.remove('pop_up-visible');
+    popUpBody.classList.add('pop_up-hidden');
 }
 
 //mobile menu animation
