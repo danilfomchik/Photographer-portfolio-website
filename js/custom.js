@@ -14,8 +14,12 @@ const getInTouchSubmit = document.querySelector('.get-in-touch__submit');
 const myForm = document.querySelector('.get-in-touch__form');
 
 getInTouchSubmit.addEventListener('click', () => {
-    window.location.reload();
+    setTimeout(formReset, 2000);
 })
+
+function formReset() {
+    myForm.reset();
+}
 
 //show popup
 letsChat_btns.forEach(btn => {
