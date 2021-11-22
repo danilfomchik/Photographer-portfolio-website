@@ -13,6 +13,10 @@ const closePopUp_btn = document.querySelector('.close_pop-up');
 const getInTouchSubmit = document.querySelector('.get-in-touch__submit');
 const myForm = document.querySelector('.get-in-touch__form');
 
+getInTouchSubmit.addEventListener('click', () => {
+    window.location.reload();
+})
+
 //show popup
 letsChat_btns.forEach(btn => {
     btn.addEventListener('click', () => {
