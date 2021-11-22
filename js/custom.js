@@ -16,11 +16,11 @@ const myForm = document.querySelector('.get-in-touch__form');
 
 //hide form after sending
 getInTouchSubmit.addEventListener('click', () => {
-    popUp.style.display = 'none';
-    body.style.overflow = 'auto';
+    // popUp.style.display = 'none';
+    // body.style.overflow = 'auto';
 
-    popUpBody.classList.remove('pop_up-visible');
-    popUpBody.classList.add('pop_up-hidden');
+    // popUpBody.classList.remove('pop_up-visible');
+    // popUpBody.classList.add('pop_up-hidden');
 
     setTimeout(formReset, 2000);
 })
