@@ -13,16 +13,20 @@ const closePopUp_btn = document.querySelector('.close_pop-up');
 const getInTouchSubmit = document.querySelector('.get-in-touch__submit');
 const myForm = document.querySelector('.get-in-touch__form');
 
+
+//hide form after sending
 getInTouchSubmit.addEventListener('click', () => {
+    popUp.style.display = 'none';
+    body.style.overflow = 'auto';
+
+    popUpBody.classList.remove('pop_up-visible');
+    popUpBody.classList.add('pop_up-hidden');
+
     setTimeout(formReset, 2000);
 })
 
 function formReset() {
     myForm.reset();
-    popUp.style.display = 'none';
-
-    popUpBody.classList.remove('pop_up-visible');
-    popUpBody.classList.add('pop_up-hidden');
 }
 
 //show popup
@@ -75,7 +79,6 @@ menuBtn.addEventListener('click', function (e){
     this.classList.toggle('menu-btn_active');
 
     mobileMenu.classList.toggle('open');
-    // body.classList.toggle('overflow');
 })
 
 //active menu item by scrolling page
@@ -95,7 +98,6 @@ const observer = new IntersectionObserver((entries) => {
     })
 }, {
     threshold: 0.4,
-    // threshold: 0.5,
 })
 
 sections.forEach(section => observer.observe(section))
@@ -107,7 +109,6 @@ menu_ul.forEach((ul) => {
             event.preventDefault();
             menuBtn.classList.toggle('menu-btn_active');
             mobileMenu.classList.toggle('open');
-            // body.classList.toggle('overflow');
 
             const menu_item = event.target;
             const sectionId = menu_item.querySelector('a').getAttribute('href').replace('#', '');
@@ -128,6 +129,5 @@ $('.customer-coments-slick').slick({
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
-    pauseOnDotsHover: true,
-    // variableWidth: true
+    pauseOnDotsHover: true
 });
