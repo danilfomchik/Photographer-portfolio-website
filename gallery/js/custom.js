@@ -43,6 +43,10 @@ async function getImages(url){
         } else if(overlayInner.offsetHeight > window.innerHeight){
             overlayImage.style.height = `${444}px`
         }
+
+        if(overlayInner.offsetWidth > window.innerWidth){
+            overlayImage.style.width = `${359}px`
+        }
     }
 
     function close() {

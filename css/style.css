@@ -846,21 +846,11 @@ select {
         padding: 0px 10px !important;
     }
     .footer-ul{
-        /* display: flex; */
         display: none;
     }
     .footer_block-container{
         padding: 10px 20px 20px;
     }
-    .menu-nav{
-
-    }
-    /* .footer-ul li{
-        padding: 5px;
-    }
-    .footer-ul li:not(:last-child){
-        margin-right: 15px;
-    } */
     .menu-container{
         display: flex;
         justify-content: space-between;
