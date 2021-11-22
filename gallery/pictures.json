@@ -48,10 +48,5 @@
         "src": "../pictures/10.png",
         "id": "item10",
         "background": "url(http://127.0.0.1:5500/gallery/pictures/10.png)"
-    },
-    {
-        "src": "../pictures/11.png",
-        "id": "item11",
-        "background": "url(http://127.0.0.1:5500/gallery/pictures/11.jpg)"
     }
 ]
