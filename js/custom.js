@@ -51,9 +51,15 @@ function closePopUp(e){
 }
 
 //mobile menu animation
+const mobileMenu = document.querySelector('.menu-ul');
+const mobileMenu_links = document.querySelectorAll('.menu-ul_item');
+
 menuBtn.addEventListener('click', function (e){
     e.preventDefault();
     this.classList.toggle('menu-btn_active');
+
+    mobileMenu.classList.toggle('open');
+    // body.classList.toggle('overflow');
 })
 
 //active menu item by scrolling page
@@ -72,7 +78,8 @@ const observer = new IntersectionObserver((entries) => {
         }
     })
 }, {
-    threshold: 0.5,
+    threshold: 0.4,
+    // threshold: 0.5,
 })
 
 sections.forEach(section => observer.observe(section))
@@ -82,6 +89,9 @@ menu_ul.forEach((ul) => {
     ul.addEventListener('click', (event) => {
         if(event.target.classList.contains('menu-ul_item')){
             event.preventDefault();
+            menuBtn.classList.toggle('menu-btn_active');
+            mobileMenu.classList.toggle('open');
+            // body.classList.toggle('overflow');
 
             const menu_item = event.target;
             const sectionId = menu_item.querySelector('a').getAttribute('href').replace('#', '');

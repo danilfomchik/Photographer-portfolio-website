@@ -28,7 +28,7 @@ button{
     background-position: center;
 }
 
-.item1{
+/* .item1{
     background-image: url(../pictures/1.png);
 }
 .item2{
@@ -57,7 +57,7 @@ button{
 }
 .item10{
     background-image: url(../pictures/10.png);
-}
+} */
 
 .gallery-item img{
     position: absolute;
@@ -119,13 +119,14 @@ button{
 .close{
     position: absolute;
     top: 3px;
-    right: 0px;
+    right: -2px;
     background: none;
     outline: 0;
     color: #474545;
     border: 0;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-size: 17px;
 }
 
 .close:hover{
@@ -135,7 +136,7 @@ button{
 .overlay-inner{
     background: white;
     /* width: 700px; */
-    padding: 20px;
+    padding: 30px 20px 20px;
     position: relative;
     opacity: 1;
 }
