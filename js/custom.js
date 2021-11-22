@@ -19,6 +19,8 @@ getInTouchSubmit.addEventListener('click', () => {
 
 function formReset() {
     myForm.reset();
+    popUp.style.display = 'none';
+
     popUpBody.classList.remove('pop_up-visible');
     popUpBody.classList.add('pop_up-hidden');
 }
