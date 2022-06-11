@@ -588,7 +588,7 @@ select {
 .work-together_info{
     background-color: white;
     text-align: center;
-    padding: 15px;
+    padding: 30px;
     margin: 0px 30px 0px 0px;
     align-self: center;
     max-width: 47vw;
@@ -597,7 +597,7 @@ select {
 .work-together_info_background{
     position: absolute;
     z-index: -1;
-    max-width: 365px;
+    max-width: 400px;
     bottom: 0px;
 }
 
@@ -606,7 +606,7 @@ select {
 }
 
 .work-together_image{
-    max-width: 300px;
+    max-width: 335px;
 }
 
 .customer-coments{
@@ -786,6 +786,12 @@ select {
         width: 80vw!important;
         border: 1px solid black;
         margin: 10px 10px 30px 10px;
+    }
+    .work-together_image{
+        max-width: 300px;
+    }
+    .work-together_info_background{
+        max-width: 365px;
     }
     .pop_up-body{
         width: 50vw;
