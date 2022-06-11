@@ -1,13 +1,13 @@
 [
     {
-        "src": "../pictures/1.png",
+        "src": "../pictures/1.jpg",
         "id": "item1",
-        "background": "url(./pictures/1.png)"
+        "background": "url(./pictures/1.jpg)"
     },
     {
-        "src": "../pictures/2.png",
+        "src": "../pictures/2.jpg",
         "id": "item2",
-        "background": "url(./pictures/2.png)"
+        "background": "url(./pictures/2.jpg)"
     },
     {
         "src": "../pictures/3.png",
@@ -15,38 +15,38 @@
         "background": "url(./pictures/3.png)"
     },
     {
-        "src": "../pictures/4.png",
+        "src": "../pictures/4.jpg",
         "id": "item4",
-        "background": "url(./pictures/4.png)"
+        "background": "url(./pictures/4.jpg)"
     },
     {
-        "src": "../pictures/5.png",
+        "src": "../pictures/5.jpg",
         "id": "item5",
-        "background": "url(./pictures/5.png)"
+        "background": "url(./pictures/5.jpg)"
     },
     {
-        "src": "../pictures/6.png",
+        "src": "../pictures/6.jpg",
         "id": "item6",
-        "background": "url(./pictures/6.png)"
+        "background": "url(./pictures/6.jpg)"
     },
     {
-        "src": "../pictures/7.png",
+        "src": "../pictures/7.jpg",
         "id": "item7",
-        "background": "url(./pictures/7.png)"
+        "background": "url(./pictures/7.jpg)"
     },
     {
-        "src": "../pictures/8.png",
+        "src": "../pictures/8.JPG",
         "id": "item8",
-        "background": "url(./pictures/8.png)"
+        "background": "url(./pictures/8.JPG)"
     },
     {
-        "src": "../pictures/9.png",
+        "src": "../pictures/9.jpg",
         "id": "item9",
-        "background": "url(./pictures/9.png)"
+        "background": "url(./pictures/9.jpg)"
     },
     {
-        "src": "../pictures/10.png",
+        "src": "../pictures/10.jpg",
         "id": "item10",
-        "background": "url(./pictures/10.png)"
+        "background": "url(./pictures/10.jpg)"
     }
 ]

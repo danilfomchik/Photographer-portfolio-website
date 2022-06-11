@@ -273,12 +273,13 @@ select {
     justify-content: center;
 }
 
-.about-me-container div{
+/* .about-me-container div{
     width: 50vw;
-}
+} */
 
 .about-me_avatar-image{
-    margin: 30px 15px 30px 10px;
+    width: 40%;
+    margin: 30px 15px;
 }
 
 .img-border{
@@ -292,7 +293,8 @@ select {
 }
 
 .about-me_info{
-    margin: 30px 10px 30px 15px;
+    width: 60%;
+    margin: 30px 15px;
     padding: 30px 74px;
     display: flex;
     flex-direction: column;
@@ -506,6 +508,9 @@ select {
 
 .services{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .services_title{
@@ -520,15 +525,18 @@ select {
     flex-direction: row;
     align-content: center;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     padding: 0px 40px 30px;
 }
 
 .services_item{
     max-width: 33.33%;
-    padding: 30px;
+    padding: 18px;
     text-align: center;
     letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .service1{
@@ -583,13 +591,13 @@ select {
     padding: 15px;
     margin: 0px 30px 0px 0px;
     align-self: center;
-    max-width: 40vw;
+    max-width: 47vw;
 }
 
 .work-together_info_background{
     position: absolute;
     z-index: -1;
-    max-width: 370px;
+    max-width: 365px;
     bottom: 0px;
 }
 
@@ -648,6 +656,11 @@ select {
     margin-bottom: 10px;
 }
 
+.slick-track{
+    display: flex;
+    align-items: center;
+}
+
 .inst_block{
     width: 100%;
     background-color: #fde3ec;
@@ -678,6 +691,11 @@ select {
 .inst_block_title{
     text-align: center;
     padding-top: 30px;
+}
+
+.inst_block_title a{
+    color: black;
+    text-decoration: none;
 }
 
 .footer_block{
@@ -736,9 +754,9 @@ select {
     .inst_block-images{
         flex-wrap: wrap;
     }
-    .inst_block-image-block:last-child{
+    /* .inst_block-image-block:last-child{
         display: none;
-    }
+    } */
     .about-me-container div{
         width: 45vw;
     }
@@ -780,7 +798,7 @@ select {
         max-width: 70vw;
     }
     .work-together_info_background{
-        max-width: 280px;
+        max-width: 240px;
     }
     .work-together_image{
         display: none;
@@ -851,7 +869,7 @@ select {
         background-color: #fde3ec;
     }
     .services_item-img{
-        margin: 0 auto;
+        /* margin: 0 auto; */
         width: 30vw;
         border: none;
     }
@@ -870,8 +888,20 @@ select {
 }
 
 @media (max-width: 731px) {
+    .work-together_info {
+        max-width: 90vw;
+    }
     .work-together-container{
         padding: 35px;
+    }
+    .work-together_info{
+        padding: 15px 25px;
+    }
+    .work-together_info title{
+        font-size: 22px;
+    }
+    .work-together_info_background {
+        max-width: 230px;
     }
     .services_item{
         padding: 15px 50px;
@@ -895,6 +925,12 @@ select {
     .work-together_info{
         max-width: 90vw;
     }
+    .work-together_info_background {
+        max-width: 255px;
+    }
+    .work-together_info title{
+        font-size: 20px;
+    }
     .services_item{
         padding: 15px 20px;
     }
@@ -908,7 +944,7 @@ select {
         width: 35vw;
     }
     .pop_up-body{
-        width: 57vw;
+        width: 70vw;
     }
     .get-in-touch__submit{
         padding: 10px 20px;
